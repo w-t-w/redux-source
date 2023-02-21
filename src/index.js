@@ -126,3 +126,43 @@
 // store.dispatch({type: 'UPLOAD_TITLE', payload: {title: '进击的大前端'}});
 // store.dispatch({type: 'UPLOAD_CONTENT', payload: {content: '手写一个 Promise'}});
 
+// redux createStore white-than-wood
+// const createStore = (state, stateChanger) => {
+//     const getState = () => state;
+//     const dispatch = action => stateChanger(state, action);
+//     return {
+//         getState,
+//         dispatch
+//     };
+// };
+// const stateChanger = (state, action) => {
+//     const {type, payload} = action;
+//     switch (type) {
+//         case 'UPLOAD_TITLE':
+//             state.title.txt = payload.title;
+//             break;
+//         case 'UPLOAD_CONTENT':
+//             state.content.txt = payload.content;
+//             break;
+//         default:
+//             break;
+//     }
+//     return state;
+// };
+// const appState = {
+//     title: {
+//         txt: '前端这件小事儿'
+//     },
+//     content: {
+//         txt: 'Redux 源码解析'
+//     }
+// };
+// const store = createStore(appState, stateChanger);
+// let state = store.getState();
+// console.log('state:', state.title.txt, state.content.txt);
+// store.dispatch({type: 'UPLOAD_TITLE', payload: {title: '进击的大前端'}});
+// state = store.getState();
+// console.log('state:', state.title.txt, state.content.txt);
+// store.dispatch({type: 'UPLOAD_CONTENT', payload: {content: '手写 Promise'}});
+// state = store.getState();
+// console.log('state:', state.title.txt, state.content.txt);
