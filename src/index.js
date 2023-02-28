@@ -288,16 +288,11 @@
 // }
 // function isPlainObject(o) {
 //     var ctor, proto;
-//
 //     if (isObject(o) === false) return false;
-//
 //     ctor = o.constructor;
 //     if (ctor === undefined) return false;
-//
 //     proto = o.prototype;
 //     if (isPlainObject(proto) === false) return false;
-//
 //     if (o.hasOwnProperty('isPrototypeOf') === false) return false;
-//
 //     return true;
 // }
