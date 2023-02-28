@@ -281,3 +281,23 @@
 // store.subscribe(() => renderApp(store.getState()));
 // store.dispatch({type: 'NOVEL_TITLE', payload: {title: '进击的大前端'}});
 // store.dispatch({type: 'NOVEL_CONTENT', payload: {content: '手写 Promise'}});
+
+// isPlainObject
+// function isObject(o) {
+//     return Object.prototype.toString.call(o) === '[object Object]';
+// }
+// function isPlainObject(o) {
+//     var ctor, proto;
+//
+//     if (isObject(o) === false) return false;
+//
+//     ctor = o.constructor;
+//     if (ctor === undefined) return false;
+//
+//     proto = o.prototype;
+//     if (isPlainObject(proto) === false) return false;
+//
+//     if (o.hasOwnProperty('isPrototypeOf') === false) return false;
+//
+//     return true;
+// }
