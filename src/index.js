@@ -296,3 +296,13 @@
 //     if (o.hasOwnProperty('isPrototypeOf') === false) return false;
 //     return true;
 // }
+
+// redux isPlainObject
+// function isPlainObject(o) {
+//     if (typeof o !== 'object' || o === null) return false;
+//     var currentObject = o;
+//     while (Object.getPrototypeOf(currentObject) !== null) {
+//         currentObject = Object.getPrototypeOf(currentObject);
+//     }
+//     return Object.getPrototypeOf(o) === currentObject;
+// }
