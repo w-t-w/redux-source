@@ -246,4 +246,29 @@
 // store.dispatch({type: 'NOVEL_TITLE', payload: {title: '进击的大前端'}});
 // store.dispatch({type: 'NOVEL_CONTENT', payload: {content: '手写 Promise'}});
 
-//
+// isPlainObject
+// function isObject(o) {
+//     return Object.prototype.toString.call(o) === '[object Object]';
+// }
+// function isPlainObject(o) {
+//     if (isObject(o) === false) return false;
+//     var ctor, proto;
+//     ctor = o.constructor;
+//     if (ctor === undefined) return true;
+//     proto = o.prototype;
+//     if (isObject(proto) === false) return false;
+//     if (o.hasOwnProperty('isPrototypeOf') === false) return false;
+//     return true;
+// }
+
+// redux reducer isPlainObject
+// function isPlainObject(o) {
+//     if (typeof o !== 'object' || o === null) return false;
+//     let currentObject = o;
+//     while (Object.getPrototypeOf(currentObject) !== null) {
+//         currentObject = Object.getPrototypeOf(currentObject);
+//     }
+//     return Object.getPrototypeOf(o) === currentObject;
+// }
+
+// redux complete sourceCode
